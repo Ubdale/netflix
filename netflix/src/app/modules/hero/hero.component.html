@@ -1,0 +1,61 @@
+<div class="container-fluid">
+<div class="video-background">
+    <video #bgVideoElement class="background-video" autoplay muted loop>
+      <source src="../../../assets/videos/netflix-landing-page-video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="gradient-overlay"></div>
+    <div class="red-overlay"></div>
+  </div>
+  <div class="hero-video">
+    <div class="content-container">
+        <video #videoElement autoplay muted loop class="main-video">
+            <source src="../../../assets/videos/netflix-landing-page-video.mp4" type="video/mp4" />
+        </video>
+        <div class="overlay"></div>
+        <div class="text-content mb-4">
+            <h1>Unlimited movies,<br> TV shows, and more</h1>
+            <p>Starts at Rs 250. Cancel anytime.</p>
+            <div (click)="togglePlayButton()" *ngIf="isPlayButton" class="btn-bg">
+            <div  class="play-btn"><svg class="play-btn-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></div>
+        </div>
+        <div (click)="togglePauseButton()" *ngIf="isPauseButton" class="btn-bg">
+        <div  class="pause-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M48 64C21.5 64 0 85.5 0 112L0 400c0 26.5 21.5 48 48 48l32 0c26.5 0 48-21.5 48-48l0-288c0-26.5-21.5-48-48-48L48 64zm192 0c-26.5 0-48 21.5-48 48l0 288c0 26.5 21.5 48 48 48l32 0c26.5 0 48-21.5 48-48l0-288c0-26.5-21.5-48-48-48l-32 0z"/></svg></div>
+    </div>    
+    </div>
+    </div>
+</div>
+
+<div class="form-section">
+<form class="mail-form" action="">
+    <div class="row">
+        <div class="col-lg-12 text-center">
+          <div class="row justify-content-center align-items-center">
+            <div class="col-lg-6 mb-3">
+              <span class="form-txt">
+                Ready to watch? Enter your email to create or restart your membership.
+              </span>
+            </div>
+            <div class="col-lg-8">
+                <div class="row align-items-center justify-content-center">
+                <div class="col-lg-5 mb-2">
+                  <input type="email" class="form-control mail-input-feild" placeholder="Email address">
+                </div>
+                <div class="col-lg-3">
+                  <button class="btn get-started-btn w-100 d-flex align-items-center justify-content-center">
+                    Get Started
+                    <div class="arrow-icon ms-2 mb-1">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="20" height="20">
+                        <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"></path>
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>     
+</form>
+</div>
+</div>

@@ -1,0 +1,130 @@
+@import '../../../../assets/scss/variables.scss';
+@import '../../../../assets/scss/general.scss';
+.main-modal-section{
+  max-height: 100%;
+  overflow-y: auto;
+  position: relative;
+  width: 100%;
+}
+
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.showsPic {
+  width: 100%; /* You can adjust the width and height as per your needs */
+  height: auto;
+  display: block;
+}
+
+.image-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(275deg, rgba(0, 0, 0, 0.5), rgb(0, 0, 0));
+      z-index: 1;
+}
+
+.close-icon{
+  position: absolute;
+  // z-index: 2;
+  top: 2%;
+  right: 3%;
+}
+
+.close-icon:hover{
+background: rgba(255, 255, 255, 0.5);
+border-radius: 20px;
+}
+.modal-content-section{
+position: absolute;
+right: 3%;
+top: 3%;
+z-index: 3;
+}
+
+.movies-details-section{
+margin-top: 400px;
+}
+
+.n-series-section{
+margin-left: 50px;
+}
+.small_desc{
+margin-left: 48px;
+color: white;
+}
+
+.n-series-section img{
+width: 100px;
+}
+
+.movies-title{
+color: white;
+font-size: 65px;
+}
+
+.list{
+ul {
+  list-style: none; /* Remove default bullets from the <ul> */
+  // padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+li {
+  color: white;
+  font-size: 0.875rem;
+  position: relative; /* Set position to allow `::before` to work */
+  padding-left: 1rem; /* Add space for the custom bullet */
+  font-weight: 500;
+}
+
+li::before {
+  content: "•"; /* Custom bullet */
+  position: absolute;
+  left: 0; /* Place the bullet on the left */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust for perfect centering */
+  color: rgba(255, 255, 255, 0.4); /* Light white color for the bullet */
+  font-size: 1rem; /* Set the bullet size */
+}
+& li:first-child::before{
+display: none;
+}
+
+}
+
+
+
+.get-started-btn{
+background-color: rgb(229, 9, 20);
+font-size: 1.5rem;
+color: white;
+border-radius: 40px;
+margin-bottom: 10px;
+font-weight: 600;
+}
+
+.arrow-icon{
+fill: white;
+}
+
+.buttons-section{margin-left: 40px;}
+
+.membership-txt{
+color: white;
+font-size: 1rem;
+font-weight: 400;
+}
+.modal-full{
+position: relative;
+max-height: 550px;
+overflow-y: auto;
+}

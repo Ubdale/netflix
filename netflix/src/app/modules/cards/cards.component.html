@@ -1,0 +1,19 @@
+<div class="container-fluid web-body">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <h2 class="mb-4">More Reasons To Join</h2>
+            <div class="card-section">
+                <div class="row">
+                    <div class="d-flex gap-3 custom-padding">
+                        <div class="card col-lg-3 position-relative" *ngFor="let card of cards">
+                           <span class="card-txt">{{card.cardTxt}}</span>
+                            <div class="icon-container text-end">
+                             <img [src]="card.icon" [alt]="card.cardTxt">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

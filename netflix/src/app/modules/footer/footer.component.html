@@ -1,0 +1,61 @@
+<div class="container-fluid web-body my-4">
+    <div class="row justify-content-center">
+    <div class="form-section">
+        <form class="mail-form" action="">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                  <div class="row justify-content-center align-items-center">
+                    <div class="col-lg-6 mb-3">
+                      <span class="form-txt">
+                        Ready to watch? Enter your email to create or restart your membership.
+                      </span>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="row align-items-center justify-content-center">
+                        <div class="col-lg-5 mb-2">
+                          <input type="email" class="form-control mail-input-feild" placeholder="Email address">
+                        </div>
+                        <div class="col-lg-3">
+                          <button class="btn get-started-btn w-100 d-flex align-items-center justify-content-center">
+                            Get Started
+                            <div class="arrow-icon ms-2 mb-1">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="20" height="20">
+                                <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"></path>
+                              </svg>
+                            </div>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>     
+        </form>
+        </div>
+</div>
+<div class="row justify-content-center">
+    <div class="col-lg-10">
+        <div class="main-footer">
+            <span class="footer-txt text-start">
+              <a href="https://www.netflix.com/contactus" target="_blank" rel="noopener noreferrer">
+                Questions? Contact us.
+              </a>
+            </span>
+          
+            <div class="footer-grid">
+              <div *ngFor="let link of footerLinks" class="footer-item text-start">
+                <a [href]="link.url" target="_blank" rel="noopener noreferrer">
+                  {{ link.text }}
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="my-4">        
+          <select class="form_field select-edit" name="options" id="options">
+            <option value="english">English</option>
+          </select>  
+        </div>
+        <span class="small-text">Netflix Pakistan. Developed By Muhammad Ubdale</span>
+</div>
+</div>
+</div>

@@ -1,0 +1,48 @@
+<!-- Child Component's Modal HTML -->
+<div class="modal-full">
+    <div class="modal-content-section">
+        <div (click)="close()" class="close-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="white" role="button" viewBox="0 0 24 24" width="24" height="24"
+                class="icon-close" aria-labelledby="closeIconTitle">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M10.5858 12L2.29291 3.70706L3.70712 2.29285L12 10.5857L20.2929 2.29285L21.7071 3.70706L13.4142 12L21.7071 20.2928L20.2929 21.7071L12 13.4142L3.70712 21.7071L2.29291 20.2928L10.5858 12Z">
+                </path>
+            </svg>
+        </div>
+        <div class="movies-details-section position-relative">
+            <div class="n-series-section mb-2">
+                <img src="../../../../assets/images/N-Series-Logo.webp" alt="N-Series-Logo">
+            </div>
+            <div class="list">
+                <ul>
+                    <li>{{ getYear(selectedShow.showReleaseDate) }}</li>
+
+                    <li>{{selectedShow.showType}}</li>
+                    <li>{{selectedShow.showRating}}</li>
+                    <li>{{selectedShow.showCountry}}</li>
+                </ul>
+            </div>
+            <div class="small_desc">
+                <p>{{ getShortDescription(selectedShow.showDescription) }}</p>
+            </div>
+            <div class="buttons-section">
+                <button class="btn get-started-btn w-50 d-flex align-items-center justify-content-center">
+                    Get Started
+                    <div class="arrow-icon ms-2 mb-1">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="20" height="20">
+                        <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"></path>
+                      </svg>
+                    </div>
+                  </button>
+                  <div>
+                    <span class="membership-txt">Create or restart your membership</span>
+                  </div>
+            </div>
+        <div></div>
+        </div>
+    </div>
+    <div class="main-modal-section">
+        <img class="showsPic" [src]="selectedShow.showPic" alt="{{ selectedShow.showName }}">
+        <div class="image-overlay"></div> <!-- Gradient overlay -->
+    </div>
+    </div>

@@ -1,0 +1,54 @@
+@import '../../../assets/scss/variables.scss';
+@import '../../../assets/scss/general.scss';
+.web-body {
+    position: relative;
+  }
+  
+  .web-body::before {
+    content: "";
+    position: absolute;
+    background: black;
+    filter: blur(40px);
+    width: 100%; 
+    height: 100%;
+    top: 0;
+    left: 0; 
+    z-index: -1; 
+  }
+  .main-footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #fff;
+  
+    .footer-txt {
+      display: block;
+      margin-bottom: 20px;
+      a {
+    color: rgba(255,255,255,0.7);
+      }
+    }
+  
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      justify-content: center;
+  
+      .footer-item {
+        a {
+          color: rgba(255,255,255,0.7);
+          font-size: 14px;
+          }
+      }
+    }
+  }
+  
+  .select-edit{
+    background-color: black;
+    color: white;
+  }
+
+  .small-text{
+    color: rgba(255,255,255,0.7);
+    font-size: 14px;
+  }

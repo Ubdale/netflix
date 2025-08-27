@@ -1,0 +1,42 @@
+@import '../../../assets/scss/variables.scss';
+@import '../../../assets/scss/general.scss';
+.web-body {
+    position: relative; /* Creates a positioning context for the pseudo-element */
+  }
+  
+  .web-body::before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(230deg, black, rgba(0, 0, 0, 0.985));
+    filter: blur(40px);
+    width: 100%; /* Set a width */
+    height: 100%; /* Set a height */
+    top: 0; /* Position at the top */
+    left: 0; /* Position at the left */
+    z-index: -1; /* Optional: Place behind the content of .web-body */
+  }
+  .card{
+    background-color: #1c1c1c; /* Dark grey for background */
+    border: 1px solid #2a2a2a; /* Slightly lighter grey for the border */
+    border-radius: 8px; /* Optional: for rounded corners */
+    color: #ffffff; /* White text color */
+    padding: 16px; /* Optional: for spacing */
+    height: 134px;
+  }
+
+  .card-txt{
+    font-size: 1.125rem;
+    font-weight: 500;
+  }
+  .icon-container{
+    position: absolute;
+    top: 50%;
+    right: 5%;
+  }
+  .icon-container img{
+    width: 60px;
+    height: 60px;
+  }
+  .custom-padding{
+    padding-right: 55px;
+  }

@@ -1,0 +1,242 @@
+@import '../../../assets/scss/variables.scss';
+@import '../../../assets/scss/general.scss';
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+  }
+  
+  .background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(100px); /* Moderate blur for a smoother effect */
+    -webkit-filter: blur(100px);
+  }
+  
+  .gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.6) 0%,    /* Slightly dark at the top */
+      rgba(0, 0, 0, 0.2) 50%,   /* Subtle transparency in the middle */
+      rgba(0, 0, 0, 0.6) 100%   /* Slightly dark at the bottom */
+    );
+    pointer-events: none; /* Ensures this layer doesn’t block interactions */
+    z-index: 1; /* Above the video */
+  }
+  
+  .red-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 0, 0, 0.15); /* Softer red transparent overlay */
+    z-index: 2; /* Above the gradient */
+    pointer-events: none;
+    filter: blur(100px); /* Adds a blur to the red overlay */
+    -webkit-filter: blur(100px);
+  }
+  
+.hero-video{
+    margin-top: -40px;
+}
+  /* Main container */
+  .content-container {
+    position: relative;
+    width: 100%;
+    max-width: 1300px;
+    max-height: 500px;
+    margin: 50px auto;
+    border-radius: 20px;
+    overflow: hidden;
+    /* Mask for advanced clipping */
+    --c: 25px;
+    mask: radial-gradient(
+        50% var(--c) at bottom,
+        rgba(0, 0, 0, 0) calc(100% - 0px),
+        #000
+    );
+}
+
+  
+  /* Background video styling */
+  .main-video {
+    width: 120%;
+    height: 100%;
+    margin: -160px;
+    object-fit: cover;
+
+  }
+  
+  /* Text overlay content */
+  .text-content {
+    position: absolute;
+    bottom: 10%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    z-index: 2;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7); /* Add text shadow for readability */
+  }
+  
+  .text-content h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 0;
+    z-index: 3; 
+    color: #fff; 
+  }
+  
+  .text-content p {
+    font-size: 1.2rem;
+    margin: 10px 0 0;
+    z-index: 3; 
+    color: #fff; 
+  }
+  
+  /* Gradient overlay */
+  .content-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.8)
+    ); /* Adds the smooth gradient overlay */
+    z-index: 1;
+    pointer-events: none; /* Prevents interference */
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to top, 
+        rgba(194, 18, 18, 0.308), 
+        rgba(194, 18, 18, 0)  
+    );
+    z-index: 2; /* Between video and text */
+}
+
+.btn-bg {
+    background-color: #000;
+    width: 50px;
+    height: 50px; /* Added height to maintain the circular shape */
+    display: flex;
+    align-items: center; /* Vertically centers the content */
+    justify-content: center; /* Horizontally centers the content */
+    margin-left: auto;
+    margin-right: 40px;
+    border-radius: 50%; /* Fully rounded */
+    padding: 6px;
+    cursor: pointer; /* Shows pointer cursor to indicate it's clickable */
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-bg:hover{
+    background-color: #313131;
+}
+
+
+.play-btn{
+    margin: auto;
+    width: 16px;
+    height: auto;
+    fill: white;
+    
+}
+.pause-btn{
+    margin: auto;
+    width: 16px;
+    height: auto;
+    fill: white;
+}
+
+
+// MEDIA QUERIES 
+@media (max-width: 950px) {
+    .text-content h1 {
+      font-size: 4rem; /* Smaller heading for small screens */
+    }
+    .text-content p {
+      font-size: 1rem; /* Adjust paragraph size */
+    }
+    .main-video {
+      margin: -100px 0; /* Reduce negative margin */
+    }
+  }
+  
+
+  @media (max-width: 750px) {
+    .text-content h1 {
+      font-size: 2.5rem; /* Smaller heading for small screens */
+    }
+    .text-content p {
+      font-size: 1rem; /* Adjust paragraph size */
+    }
+    .main-video {
+      margin: -80px 0; /* Reduce negative margin */
+    }
+    .btn-bg{
+        transform: scale(0.7);
+    }
+  }
+  
+  @media (max-width: 620px) {
+    .text-content h1 {
+      font-size: 1.5rem; /* Smaller heading for small screens */
+    }
+    .text-content p {
+      font-size: 0.5rem; /* Adjust paragraph size */
+    }
+    .main-video {
+      margin: -80px 0; /* Reduce negative margin */
+    }
+    .btn-bg{
+        transform: scale(0.5);
+    }
+  }
+
+  @media (max-width: 540px) {
+    .text-content h1 {
+        font-size: 1rem; /* Smaller heading for small screens */
+        justify-content: center;
+        align-items: center;
+      }
+      .text-content p {
+       display: none;
+      }
+.btn-bg{
+    display: none;
+}  
+.content-container{
+    min-height: 125px !important;
+    min-width: 100px;
+}
+}
+
+@media (max-width: 370px) {
+    .content-container{
+        min-height: 125px !important;
+        min-width: 100px;
+    }
+
+}
