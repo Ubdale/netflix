@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectorRef, Component, ElementRef, ViewChild } from '@angular/core';
-import { MoviesService } from './movies.service';
+import { MoviesService } from '../../services/movies.service';
 import { ShowsModalComponent } from './shows-modal/shows-modal.component';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { NetflixShowsModalComponent } from './netflix-shows-modal/netflix-shows-modal.component';
