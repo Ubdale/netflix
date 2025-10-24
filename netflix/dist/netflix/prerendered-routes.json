@@ -1,0 +1,10 @@
+{
+  "routes": [
+    "/cards",
+    "/collapse",
+    "/footer",
+    "/header",
+    "/hero",
+    "/shows"
+  ]
+}
